@@ -8,6 +8,13 @@
   <title>Document</title>
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -16,8 +23,10 @@
 
 <body>
 
-  <header class="header container ">
-    <a href="#" class="logo"></a>
+  <header class="header ">
+    <a href="#" class="headre__logo">
+      <img class="img img--logo" src="img/logo.png" alt="логотип">
+    </a>
     <nav>
       <ul class="ul-reset nav__list">
         <li></li>
@@ -26,23 +35,82 @@
         <li></li>
       </ul>
     </nav>
-    <button>Заказать звонок</button>
-
+    <button class="header__btn btn btn--orange">Заказать звонок</button>
+    <ul class="social ul-reset">
+      <li class="social__item">
+        <a href="#" class="link link--social" target="blank" aria-label="Мессенджер whatsapp">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="first-path"
+              d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
+              fill="#30BF39" />
+            <path
+              d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z"
+              fill="white" />
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="link link--social" target="blank" aria-label="Мессенджер telegram">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="first-path"
+              d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+              fill="url(#paint0_linear_136320_64)" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z"
+              fill="white" />
+            <defs>
+              <linearGradient id="paint0_linear_136320_64" x1="20" y1="0" x2="20" y2="39.7033"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="" stop-color="#2AABEE" />
+                <stop offset="1" stop-color="#229ED9" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </header>
 
   <main class="main container">
     <div class="swiper swiper--main">
-      <ul class="swiper-wrapper ul-reset">
-        <li class="swiper-slide">
-          Slide 1
-        </li>
-        <li class="swiper-slide">
-          Slide 2
-        </li>
-        <li class="swiper-slide">
+      <div class="swiper-wrapper">
+        <section class="swiper-slide hero">
+          <h2 class="hero__title title title--big">Постройте дом быстрее и&nbsp;легче через приложение</h2>
+          <img class="hero__img img" src="img/prod/hero.png" alt="приложение">
+        </section>
+
+        <section class="swiper-slide how">
+          <h2 class="how__title title title--big"> Как это работает?</h2>
+          <ul class="how__list ul-reset">
+            <li class="how__item card card--how">
+              <span class="card__num">1</span>
+              <h3 class="card__title title title--small">Выберите проект&nbsp;/ тип работ</h3>
+              <div class="w">
+                <img src="img/prod/phone-50-1.png" class="how__img img" alt="первый этап">
+              </div>
+            </li>
+            <li class="how__item card card--how">
+              <span class="card__num">2</span>
+              <h3 class="card__title title title--small">Консультирование и&nbsp;согласование объёма работ</h3>
+              <div class="w">
+                <img src="img/prod/phone-50-1.png" class="how__img img" alt="второй этап">
+              </div>
+            </li>
+            <li class="how__item card card--how">
+              <span class="card__num">3</span>
+              <h3 class="card__title title title--small">Наблюдете за&nbsp;процессом разработки</h3>
+              <div class="w">
+                <img src="img/prod/phone-50-1.png" class="how__img img" alt="третий этап">
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="swiper-slide">
           Slide 3
-        </li>
-        <li class="swiper-slide">
+        </section>
+
+        <section class="swiper-slide">
           <div class="swiper swiper--card">
             <ul class="swiper-wrapper ul-reset">
               <li class="swiper-slide">HORIZONT Slide 1</li>
@@ -54,35 +122,73 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
-        </li>
-        <li class="swiper-slide">
+        </section>
+
+        <section class="swiper-slide">
           Slide 5
-        </li>
-        <li class="swiper-slide">
+        </section>
+
+        <section class="swiper-slide">
           Slide 6
-        </li>
-        <li class="swiper-slide">
+        </section>
+
+        <section class="swiper-slide">
           Slide 7
-        </li>
-        <li class="swiper-slide">
+        </section>
+
+        <section class="swiper-slide">
           Slide 8
-        </li>
-      </ul>
+        </section>
+      </div>
     </div>
     <div class="swiper-pagination swiper-pagination--main swiper-pagination-vertical--main"></div>
   </main>
 
-  <footer class="footer container">
-    <h1 class="title">test</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolores ipsa aliquam! Velit saepe architecto,
-      dolores ducimus incidunt non dicta neque eos, mollitia dolore vel qui alias error repellendus possimus.</p>
+  <!--<footer class="footer">
+    <a href="#" class="headre__logo">
+      <img class="img img--logo" src="img/logo.png" alt="логотип">
+    </a>
+
+    <button class="header__btn btn btn--orange">Заказать звонок</button>
+    <ul class="social ul-reset">
+      <li class="social__item">
+        <a href="#" class="link link--social" target="blank" aria-label="Мессенджер whatsapp">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="first-path"
+              d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
+              fill="#30BF39" />
+            <path
+              d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z"
+              fill="white" />
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="link link--social" target="blank" aria-label="Мессенджер telegram">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="first-path"
+              d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+              fill="url(#paint0_linear_136320_64)" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z"
+              fill="white" />
+            <defs>
+              <linearGradient id="paint0_linear_136320_64" x1="20" y1="0" x2="20" y2="39.7033"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="" stop-color="#2AABEE" />
+                <stop offset="1" stop-color="#229ED9" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </footer>
+-->
 
 
 
-  <!--
-    
-      
+  <!--     
         <div class="swiper-wrapper">
             <div class="swiper-slide">Slide 1</div>
             <div class="swiper-slide">Slide 2</div>
